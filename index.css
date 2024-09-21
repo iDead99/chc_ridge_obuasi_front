@@ -12,6 +12,11 @@ header {
     background-color: #2c3e50;
     padding: 1rem 0;
 }
+#Tuesday_service-img{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
 
 .navbar {
     display: flex;
@@ -24,7 +29,7 @@ header {
 }
 
 .logo img {
-    width: 120px;
+    width: 300px;
 }
 
 .nav-links {
@@ -121,6 +126,8 @@ section {
 .services-section{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    padding: 60px 0px;
+    padding-bottom: 0;
 }
 .services-list-container{
     display: flex;
@@ -133,6 +140,18 @@ section {
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+}
+#services-img-container{
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+}
+.services-section img{
+    width: 200px;
+    height: 200px;
+    padding: 15px 10px;
+    border-radius: 50%;
 }
 
 .about-section, .services-section, .events-section, .contact-section {
@@ -150,7 +169,7 @@ footer {
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .logo img {
-        width: 100px;
+        width: 200px;
     }
     .navbar {
         justify-content: center;
@@ -185,15 +204,15 @@ footer {
 
 @media (max-width: 480px) {
     .logo img {
-        width: 100px;
+        width: 200px;
     }
     .navbar {
-        justify-content: center;
+        justify-content: left;
     }
 
     .nav-links {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: right;
         gap: 20px;
         padding: 0%;
     }
@@ -212,6 +231,10 @@ footer {
     
     section {
         padding: 30px 10px;
+    }
+    .services-section img{
+        width: 120px;
+        height: 120px;
     }
 
     footer {
