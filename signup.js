@@ -13,7 +13,7 @@ const confirmRegisteration = document.getElementById("confirm_registeration");
 const emailError = document.getElementById("email_error");
 // const passwordError = document.getElementById("password_error");
 
-const submitBtn = document.getElementById("submit");
+const submitBtn = document.querySelector(".btn");
 
 const spinner = document.querySelector('.spinner');
 
