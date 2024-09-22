@@ -79,7 +79,7 @@ document.querySelector('.register-form').addEventListener('submit', function(e) 
 })
 
 function registerMember(userData){
-    fetch('http://127.0.0.1:8000/auth/users/', {
+    fetch('https://chc-ridge-obuasi-back.onrender.com/auth/users/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
