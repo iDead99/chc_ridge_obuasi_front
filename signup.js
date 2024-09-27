@@ -66,7 +66,7 @@ document.querySelector('.register-form').addEventListener('submit', function(e) 
         residence: residence.value,
         gps_address: gpsAddress.value,
         occupation: occupation.value.charAt(0).toUpperCase() + occupation.value.slice(1).toLowerCase(),
-        password: 'ILoveDjango',
+        // password: 'ILoveDjango',
         };
 
    registerMember(userData);
@@ -79,7 +79,7 @@ document.querySelector('.register-form').addEventListener('submit', function(e) 
 })
 
 function registerMember(userData){
-    fetch('https://chc-ridge-obuasi-back.onrender.com/auth/users/', {
+    fetch('https://chc-ridge-obuasi-back.onrender.com/core/members/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
