@@ -19,35 +19,44 @@ const spinner = document.querySelector('.spinner');
 
 firstName.addEventListener('input', () => {
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 lastName.addEventListener('input', () => {
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 email.addEventListener('input', () => {
     emailError.textContent='';
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 phone.addEventListener('input', () => {
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 residence.addEventListener('input', () => {
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 gpsAddress.addEventListener('input', () => {
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 occupation.addEventListener('input', () => {
     confirmRegisteration.textContent='';
+    confirmRegisteration.style.display='none';
 })
 
 // password.addEventListener('input', () => {
 //     passwordError.textContent='';
-//     confirmRegisteration.textContent='';
+    // confirmRegisteration.textContent='';
+    // confirmRegisteration.style.display='none';
 // })
 
 // confirmPassword.addEventListener('input', () => {
 //     passwordError.textContent='';
 //     confirmRegisteration.textContent='';
+    // confirmRegisteration.style.display='none';
 // })
 
 document.querySelector('.register-form').addEventListener('submit', function(e) {
@@ -106,6 +115,7 @@ function registerMember(userData){
         }
         else{
             confirmRegisteration.textContent='Member registered successfully';
+            confirmRegisteration.style.display='block';
             window.location.href="#confirm_registeration";
             
             spinner.style.display='none';
