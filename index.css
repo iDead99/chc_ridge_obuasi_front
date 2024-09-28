@@ -1,23 +1,48 @@
 /* General Styles */
-body, html {
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+
+/* Initial header styles */
+/* General Header Styling */
 header {
     background-color: #2c3e50;
     padding: 1rem 0;
-}
-#top-bannner-img{
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Logo Styles */
+.logo img {
+    height: 60px;
+    transition: height 0.3s ease;
+}
+
+/* Sticky Header Animation */
+header.sticky {
+    background-color: #34495e;
+    padding: 0.5rem 0;
+}
+
+header.sticky .logo img {
+    height: 45px;
+}
+
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -28,10 +53,12 @@ header {
     flex-wrap: wrap;
 }
 
+/* Adjust Logo Width */
 .logo img {
     width: 300px;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -46,17 +73,21 @@ header {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
+/* Hover Effects */
 .nav-links a:hover, .register-btn {
     background-color: #e67e22;
     border-radius: 4px;
 }
 
+/* Register Button */
 .register-btn {
     background-color: #e74c3c;
     color: white;
 }
+
 .fm-icon-container{
     background-color: #ecf0f1;
     padding: 20px 0;
@@ -248,6 +279,19 @@ section {
     background-color: #ecf0f1;
     margin-top: 20px;
 }
+
+.all-event-img-container{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    gap: 20px;
+    /* border: 2px solid black; */
+}
+.event-img{
+    width: 25em;
+    border-radius: 20px;
+}
+
 .contact-section{
     padding-left: 0;
     padding-right: 0;
@@ -327,6 +371,10 @@ footer {
     .service-img-description-hr{
         width: 60%;
     }
+    .event-img{
+        width: 13em;
+        border-radius: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -394,6 +442,10 @@ footer {
     }
     .service-img-description-hr{
         width: 85%;
+    }
+    .event-img{
+        width: 10em;
+        border-radius: 10px;
     }
 
     footer {
