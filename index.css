@@ -10,6 +10,23 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
 }
+.event-banner-container{
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    padding: 7px;
+    animation: animate-event-banner 2s infinite;
+}
+.event-banner{
+    width: 20%;
+    border-radius: 7px;
+    border: 1px solid white;
+}
+@keyframes animate-event-banner {
+    50%{
+        transform: scale(1.03, 1.03);
+    }
+}
 
 
 /* Initial header styles */
@@ -450,9 +467,8 @@ footer {
     .service-img-description-hr{
         width: 85%;
     }
-    .event-img {
-        width: 70vw; /* Make the image 90% of the viewport width */
-        max-width: none; /* Allow it to expand fully */
+    .all-event-img-container {
+        justify-content: initial;
     }
 
     footer {
