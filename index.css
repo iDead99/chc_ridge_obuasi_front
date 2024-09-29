@@ -282,15 +282,19 @@ section {
 
 .all-event-img-container {
     display: flex;
-    justify-content: space-evenly;
-    overflow-x: scroll;
+    justify-content: flex-start; /* Align items to the left */
+    overflow-x: auto; /* Allow horizontal scrolling */
     gap: 20px;
+}
+
+.event-img-container {
+    flex: 0 0 auto; /* Prevents images from shrinking */
 }
 
 .event-img {
     width: 100%;
-    max-width: 25em; /* Keeps the larger size for bigger screens */
-    height: auto; /* Ensures the image maintains its aspect ratio */
+    max-width: 25em;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -447,8 +451,13 @@ footer {
         width: 85%;
     }
     .event-img {
-        width: 90vw; /* Make the image 90% of the viewport width */
-        max-width: none; /* Allow it to expand fully */
+        width: 70vw; /* Reduce size on smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    .all-event-img-container {
+        padding-left: 10px; /* Add padding to ensure the first image is not cut off */
+    }
     }
 
     footer {
