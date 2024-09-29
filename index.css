@@ -493,6 +493,10 @@ footer {
     .service-img-description-hr{
         width: 85%;
     }
+    .all-event-img-container {
+        display: flex;
+        justify-content: initial;
+    }
 
     .all-book-img-txt{
         font-size: 20px;
