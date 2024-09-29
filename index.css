@@ -280,17 +280,20 @@ section {
     margin-top: 20px;
 }
 
-.all-event-img-container{
+.all-event-img-container {
     display: flex;
     justify-content: space-evenly;
     overflow-x: scroll;
     gap: 20px;
-    /* border: 2px solid black; */
 }
-.event-img{
-    width: 25em;
+
+.event-img {
+    width: 100%;
+    max-width: 25em; /* Keeps the larger size for bigger screens */
+    height: auto; /* Ensures the image maintains its aspect ratio */
     border-radius: 20px;
 }
+
 
 .contact-section{
     padding-left: 0;
@@ -443,9 +446,9 @@ footer {
     .service-img-description-hr{
         width: 85%;
     }
-    .event-img{
-        width: 10em;
-        border-radius: 10px;
+    .event-img {
+        width: 90vw; /* Make the image 90% of the viewport width */
+        max-width: none; /* Allow it to expand fully */
     }
 
     footer {
